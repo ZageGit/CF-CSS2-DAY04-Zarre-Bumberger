@@ -1,23 +1,23 @@
-.wrapper {
+main{   /*gap to the top*/
+    margin-top: 2%;
+}
+.wrapper {  /*flex-flow is defined within @media*/
     background-color: royalblue;
+    align-content: center;
     display: flex;
     justify-content: space-around; /*centerd column which holds and displays an image and text*/
-    flex-flow: row wrap;
     width: auto;
     height: auto;
 }
-.picture-card{
+.picture-card{  /*contains a Picture class and a text */
     background-color: salmon;
     display: flex;
-    
     justify-content: center;
     width: 50%;     /*adaptive image scaling */
     height: auto;
     flex-flow: column wrap;
 }
-img {
-    height: 20em;
-    width: auto;
+img { /*it is imbedded within picture-card height and width are defined in @media*/
     margin: auto;
 }
 
@@ -25,8 +25,10 @@ p {
     color: red;
     text-align: center;
 }
-
-@media only screen and (max-width: 600px) {
+h1{
+    text-align: center;
+}
+@media only screen and (max-width: 480px) { /*for small screens (Smartphone) */
     body {
       background-color: lightblue;
     }
@@ -38,3 +40,28 @@ p {
         height: 5em;
     }
   }
+
+@media only screen and (min-width: 481px) and (max-width: 1200px) { /*for medium screens (tablets and small laptops)*/
+    body {
+      background-color: red;
+    }
+    .wrapper{
+        flex-flow: column-reverse wrap;
+    }
+    img {
+        width: auto;
+        height: 10em;
+    }
+}
+@media only screen and  (min-width: 1201px) {/*for any big screen (Monitors, Tv's & Projectors)*/
+    body {
+      background-color: violet;
+    }
+    .wrapper{
+        flex-flow: row wrap;
+    }
+    img {
+        width: auto;
+        height: 20em;
+    }
+}
