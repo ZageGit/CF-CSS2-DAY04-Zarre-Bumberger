@@ -1,20 +1,40 @@
-
-.container {
+.wrapper {
     background-color: royalblue;
     display: flex;
-    justify-content: center;
-    align-items: center;    /*centerd column which holds and displays an image and text*/
-    flex-flow: column wrap;
+    justify-content: space-around; /*centerd column which holds and displays an image and text*/
+    flex-flow: row wrap;
     width: auto;
     height: auto;
 }
-.picture{
+.picture-card{
     background-color: salmon;
     display: flex;
+    
     justify-content: center;
     width: 50%;     /*adaptive image scaling */
     height: auto;
+    flex-flow: column wrap;
 }
+img {
+    height: 20em;
+    width: auto;
+    margin: auto;
+}
+
 p {
     color: red;
+    text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .wrapper{
+        flex-flow: column wrap;
+    }
+    img {
+        width: auto;
+        height: 5em;
+    }
+  }

@@ -1,24 +1,20 @@
-.container {
+.wrapper {
   background-color: royalblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   /*centerd column which holds and displays an image and text*/
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   width: auto;
   height: auto;
 }
 
-.picture {
+.picture-card {
   background-color: salmon;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,9 +25,36 @@
   width: 50%;
   /*adaptive image scaling */
   height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+img {
+  height: 20em;
+  width: auto;
+  margin: auto;
 }
 
 p {
   color: red;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  img {
+    width: auto;
+    height: 5em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
