@@ -8,17 +8,6 @@ $max-width:1200px
 $header-color: red
 $width: 1000px
  
-@media screen and (max-width: 480px) 
-    body 
-        background-image: url(Marco_Polo.jpg)
-		background-width: 50%
-
-@media screen and (min-width: 481px) and (max-width: 1200px) 
-    body 
-        background-color: deepskyblue
-       
-
-
 h1
 	font: 1000% $font-stack
 	color: $title-color
@@ -26,7 +15,11 @@ h1
 body
 	width: $width
 	max-width: $max-width
-	
+	background-image: url(Marco_Polo.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	height: 50%
+	position: relative
 	margin: auto
 	margin-top: 5%
 
